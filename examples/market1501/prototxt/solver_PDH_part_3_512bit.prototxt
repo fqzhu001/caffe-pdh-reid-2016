@@ -1,0 +1,13 @@
+net: "examples/market1501/prototxt/train_PDH_part_3_512bit.prototxt"
+iter_size: 3
+base_lr: 0.00111111
+lr_policy: "step"
+gamma: 0.333333
+stepsize: 5000
+display: 20
+max_iter: 20000
+momentum: 0.4
+weight_decay: 0.0005
+snapshot: 20000
+snapshot_prefix: "examples/market1501/snapshot/PDH_part_3"
+solver_mode:GPU
