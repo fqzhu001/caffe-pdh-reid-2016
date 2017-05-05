@@ -6,7 +6,8 @@ The compile of Caffe can be reffered at the [caffe](https://github.com/BVLC/caff
 
 If you have complie problem, please remove the folder `examples/market1501/evaluate/KISSME`.
 
-Note: this work was done in late 2015 when we were trying the "verification" Network to learn embeddings. Later, we turn to the "identification" models and obtain more competitive results. Interested readers can also refer to our works on the "identification" models [1], [2], [3], [4], [5], [6].
+#### Note:
+this work was done in late 2015 when we were trying the "verification" Network to learn embeddings. Later, we turn to the "identification" models and obtain more competitive results. Interested readers can also refer to our works on the "identification" models [1], [2], [3], [4], [5], [6].
 
 ### References
 
