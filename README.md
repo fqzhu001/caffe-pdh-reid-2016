@@ -1,7 +1,8 @@
 # caffe-pdh-reid-2016
 
 A [caffe](https://github.com/BVLC/caffe)-based implementation for the baseline and proposed PDH method, providing whole training, testing and evaluation codes on Market-1501 dataset.
-
+The compile of Caffe can be reffered at the [caffe](https://github.com/BVLC/caffe).
+Note: If you have complie problem, please remove the folder 'examples/market1501/evaluate/KISSME'
 ## Data Preparation
 - download Market-1501 dataset(http://www.liangzheng.com.cn) and `ln -s $Market-1501 examples/market1501/`
 - download imagenet pre-train caffemodel (http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel) and `ln -s $caffemodel models/bvlc_reference_caffenet/`
