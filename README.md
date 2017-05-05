@@ -8,7 +8,7 @@ If you have complie problem, please remove the folder `examples/market1501/evalu
 
 Note: this work was done in late 2015 when we were trying the "verification" Network to learn embeddings. Later, we turn to the "identification" models and obtain more competitive results. Interested readers can also refer to our works on the "identification" models [1], [2], [3], [4], [5], [6].
 
-#References
+# References
 
 [1] L. Zheng, H. Zhang, S. Sun, M. Chandraker, Y. Yang, and Q. Tian, Person re-identification in the wild, in Proc. CVPR, 2017.
 
@@ -38,7 +38,7 @@ Evaluation can be found in `examples/market1501/evaluation`.
 
 
 
-### baseline
+### Baseline
 - run `examples/market1501/data_prepare/create_market1501-train_baseline.sh` to generate training lmdb data for training CNN model
 - run `examples/market1501/train_baseline_512bit.sh` for training CNN model at the length of 512 bits hash codes
 - run `examples/market1501/feature_extract/extract_query_baseline.py` and `examples/market1501/feature_extract/extract_test_baseline.py` for extracting features of query and test data
@@ -46,7 +46,7 @@ Evaluation can be found in `examples/market1501/evaluation`.
 - run `examples/market1501/evaluation/main_single_query.m` to evaluate the performance of baseline on Market-1501
 - final results are : mAP = 0.1237, r1 precision = 0.2536 [Hamming distance] Note: this work was done in late 2015 when the baseline performance is relatively low. However, our following PDH method achieved a significantly improvement compared with baseline.
 
-### proposed PDH method (Note: we just take dividing the entire image into overlap 4 parts for example.)
+### The proposed PDH method (Note: we just take dividing the entire image into overlap 4 parts for example.)
 - run `examples/market1501/data_prepare/generate_parts.m` to generate 4 parts for each image and save in folders named `part_1`, `part_2`, `part_3` and `part_4`, under the path `examples/market1501/Market-1501-v15.09.15/bounding_box_train`, `examples/market1501/Market-1501-v15.09.15/query` and `examples/market1501/Market-1501-v15.09.15/bounding_box_test`respectively
 - run `create_market1501-train_part_1.sh`, `create_market1501-train_part_2.sh`, `create_market1501-train_part_3.sh` and `create_market1501-train_part_4.sh` to generate training lmdb data for training part-based CNN model 
 - run `examples/market1501/train_PDH_part_1.sh`, `examples/market1501/train_PDH_part_2.sh`, `examples/market1501/train_PDH_part_3.sh` and `examples/market1501/train_PDH_part_4.sh` sequentially for training part-based CNN model
