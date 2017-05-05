@@ -6,7 +6,7 @@ The compile of Caffe can be reffered at the [caffe](https://github.com/BVLC/caff
 
 If you have complie problem, please remove the folder `examples/market1501/evaluate/KISSME/`.
 
-#### Note:this work was done in late 2015 when we were trying the "verification" Network to learn embeddings. Later, we turn to the "identification" models and obtain more competitive results. Interested readers can also refer to our works on the "identification" models [1], [2], [3], [4], [5], [6].
+#### Note: this work was done in late 2015 when we were trying the "verification" Network to learn embeddings. Later, we turn to the "identification" models and obtain more competitive results. Interested readers can also refer to our works on the "identification" models [1], [2], [3], [4], [5], [6].
 
 ### References
 
@@ -44,7 +44,8 @@ Evaluation can be found in `examples/market1501/evaluation/`.
 - run `examples/market1501/feature_extract/extract_query_baseline.py` and `examples/market1501/feature_extract/extract_test_baseline.py` for extracting features of query and test data
 - run `examples/market1501/hashcode_query_512bit_baseline.m` and `examples/market1501/hashcode_test_512bit_baseline.m` for generating binary hash codes of query and test data
 - run `examples/market1501/evaluation/main_single_query.m` to evaluate the performance of baseline on Market-1501
-- final results are : mAP = 0.1237, r1 precision = 0.2536 [Hamming distance] Note: this work was done in late 2015 when the baseline performance is relatively low. However, our following PDH method achieved a significantly improvement compared with baseline.
+
+Final results are : mAP = 0.1237, r1 precision = 0.2536 [Hamming distance]. Note: this work was done in late 2015 when the performance of baseline is relatively low. However, our following PDH method has a significantly improvement compared with baseline.
 
 ### The proposed PDH method (Note: we just take dividing the entire image into overlap 4 parts for example.)
 - run `examples/market1501/data_prepare/generate_parts.m` to generate 4 parts for each image and save in folders named `part_1`, `part_2`, `part_3` and `part_4`, under the path `examples/market1501/Market-1501-v15.09.15/bounding_box_train`, `examples/market1501/Market-1501-v15.09.15/query` and `examples/market1501/Market-1501-v15.09.15/bounding_box_test`respectively
@@ -52,8 +53,9 @@ Evaluation can be found in `examples/market1501/evaluation/`.
 - run `examples/market1501/train_PDH_part_1.sh`, `examples/market1501/train_PDH_part_2.sh`, `examples/market1501/train_PDH_part_3.sh` and `examples/market1501/train_PDH_part_4.sh` sequentially for training part-based CNN model
 - run `examples/market1501/feature_extract/PDH_extract_query.py` and `examples/market1501/feature_extract/PDH_extract_test.py` for extracting features of query and test data
 - run `examples/market1501/PDH_extract_hashcode_query.m` and `examples/market1501/PDH_extract_hashcode_test.m` for generating binary hash codes of query and test data (including hash codes concatenation)
-- run `examples/market1501/evaluation/main_single_query.m` to evaluate the performance of the proposed PDH method on Market-1501
-- final results are : mAP = 0.2606, r1 precision = 0.4789 [Hamming distance]
+- run `examples/market1501/evaluation/main_single_query.m` to evaluate the performance of proposed PDH method on Market-1501
+
+Final results are : mAP = 0.2606, r1 precision = 0.4789 [Hamming distance].
 
 # Citation
 Please cite this paper in your publications if it helps your research:
