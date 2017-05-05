@@ -8,7 +8,7 @@ If you have complie problem, please remove the folder `examples/market1501/evalu
 
 Note: this work was done in late 2015 when we were trying the `verification' Network to learn embeddings. Later, we turn to the `identification' models and obtain more competitive results. Interested readers can also refer to our works on the `identification' models [1], [2], [3], [4], [5], [6].
 
-#References
+##References
 
 [1] L. Zheng, H. Zhang, S. Sun, M. Chandraker, Y. Yang, and Q. Tian, ``Person re-identification in the wild,'' in Proc. CVPR, 2017.
 
