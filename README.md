@@ -4,7 +4,7 @@ A [caffe](https://github.com/BVLC/caffe)-based implementation for the baseline a
 
 The compile of Caffe can be reffered at the [caffe](https://github.com/BVLC/caffe).
 
-If you have complie problem, please remove the folder `examples/market1501/evaluate/KISSME`.
+If you have complie problem, please remove the folder `examples/market1501/evaluate/KISSME/`.
 
 #### Note:this work was done in late 2015 when we were trying the "verification" Network to learn embeddings. Later, we turn to the "identification" models and obtain more competitive results. Interested readers can also refer to our works on the "identification" models [1], [2], [3], [4], [5], [6].
 
@@ -28,13 +28,13 @@ If you have complie problem, please remove the folder `examples/market1501/evalu
 
 ## Directions
 
-The prototxt can be found in `examples/market1501/prototxt`.
+The prototxt can be found in `examples/market1501/prototxt/`.
 
-Extract features for query and bounding_box_test can be found in `examples/market1501/feature_extract`.
+Extract features for query and bounding_box_test can be found in `examples/market1501/feature_extract/`.
 
-The trained models can be saved in `examples/market1501/snapshot`, the folder "snapshot" will be built by yourself.
+The trained models can be saved in `examples/market1501/snapshot/`, the folder "snapshot" will be built by yourself.
 
-Evaluation can be found in `examples/market1501/evaluation`.
+Evaluation can be found in `examples/market1501/evaluation/`.
 
 
 
@@ -48,7 +48,7 @@ Evaluation can be found in `examples/market1501/evaluation`.
 
 ### The proposed PDH method (Note: we just take dividing the entire image into overlap 4 parts for example.)
 - run `examples/market1501/data_prepare/generate_parts.m` to generate 4 parts for each image and save in folders named `part_1`, `part_2`, `part_3` and `part_4`, under the path `examples/market1501/Market-1501-v15.09.15/bounding_box_train`, `examples/market1501/Market-1501-v15.09.15/query` and `examples/market1501/Market-1501-v15.09.15/bounding_box_test`respectively
-- run `create_market1501-train_part_1.sh`, `create_market1501-train_part_2.sh`, `create_market1501-train_part_3.sh` and `create_market1501-train_part_4.sh` to generate training lmdb data for training part-based CNN model 
+- run `examples/market1501/data_prepare/create_market1501-train_part_1.sh`, `examples/market1501/data_prepare/create_market1501-train_part_2.sh`, `examples/market1501/data_prepare/create_market1501-train_part_3.sh` and `examples/market1501/data_prepare/create_market1501-train_part_4.sh` to generate training lmdb data for training part-based CNN model 
 - run `examples/market1501/train_PDH_part_1.sh`, `examples/market1501/train_PDH_part_2.sh`, `examples/market1501/train_PDH_part_3.sh` and `examples/market1501/train_PDH_part_4.sh` sequentially for training part-based CNN model
 - run `examples/market1501/feature_extract/PDH_extract_query.py` and `examples/market1501/feature_extract/PDH_extract_test.py` for extracting features of query and test data
 - run `examples/market1501/PDH_extract_hashcode_query.m` and `examples/market1501/PDH_extract_hashcode_test.m` for generating binary hash codes of query and test data (including hash codes concatenation)
