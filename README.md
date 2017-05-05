@@ -8,13 +8,13 @@ A [caffe](https://github.com/BVLC/caffe)-based implementation for the baseline a
 
 ## Directions
 
-The prototxt can be found in `examples/market1501/prototxt`
+The prototxt can be found in `examples/market1501/prototxt`.
 
-Extract features for query and bounding_box_test can be found in `examples/market1501/feature_extract` 
+Extract features for query and bounding_box_test can be found in `examples/market1501/feature_extract`.
 
-The trained models can be saved in `examples/market1501/snapshot`
+The trained models can be saved in `examples/market1501/snapshot`, the folder "snapshot" will be built by yourself.
 
-Evaluation can be found in `examples/market1501/evaluation`
+Evaluation can be found in `examples/market1501/evaluation`.
 
 
 
