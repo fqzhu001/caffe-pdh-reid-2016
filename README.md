@@ -64,6 +64,9 @@ Please cite this paper in your publications if it helps your research:
   title={Part-based deep hashing for large-scale person re-identification},
   author={Zhu, Fuqing and Kong, Xiangwei and Zheng, Liang and Fu, Haiyan and Tian, Qi},
   journal={IEEE Transactions on Image Processing},
+  volume={26},
+  number={10},
+  pages={4806--4817},
   year={2017},
   doi={10.1109/TIP.2017.2695101},
   publisher={IEEE}
